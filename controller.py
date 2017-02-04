@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.scrolledtext import ScrolledText
 
 class ControlPanel(Frame):
     """A control panel is a Grapical User Interface for a user to interact with
@@ -26,6 +27,9 @@ class ControlPanel(Frame):
         labelIP.config(text="IP: ")
         labelIP.grid(row = 0, column=0)
         self.ips.grid(row = 0, column = 1)
+        self.textarea = ScrolledText(self)
+        self.textarea.grid(row = 0, column = 2)
+        self.textarea.configure(state = "disabled")
 
         self.location = Button(None)
         self.location["text"] = "Get Location"
