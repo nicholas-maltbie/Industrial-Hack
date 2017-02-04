@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
+import webreader
 
 class ControlPanel(Frame):
     """A control panel is a Grapical User Interface for a user to interact with
@@ -11,89 +12,70 @@ class ControlPanel(Frame):
         
 # ips, owner, filter, location, auto
     def create_widgets(self):
-        """Creates the buttons."""
-        self.ips = Button(None)
-        self.ips["text"] = "Get IP's"
-        self.ips["command"] = self.get_ips
-        
+        """Creates the buttons.""" 
         # Generates title.
         root.wm_title("OSINTICS for 500")
 
-        # Generate text for IP
-        labelIP = Label(text = "IP: ")
-        labelIP.grid(row = 0, column=0)
-        # Create padding.
-        self.ips.grid(row = 0, column = 1)
         # Draw button for IP
-        self.textarea = ScrolledText(self)
-        self.textarea.grid(row = 0, column = 2)
+        self.textarea = ScrolledText(self).grid(row = 0, column = 2)
 
-        # Generate text entry box.
-        e1 = Entry(root, text="Input")
-        e2 = Entry(root, text="Input")
-        e3 = Entry(root, text="Input")
-        e4 = Entry(root, text="Input")
-        e5 = Entry(root, text="Input")
+        # Creates empty list for entry boxes.
+        entry_list = []
+        labels = []
+        items_str = ["IP", "Location", "Filter", "Owner", "Auto"]
         
-        e1.grid(row = 0, column = 3)
-        e2 = Entry(root, text="Input")
-        e2.grid(row = 1, column = 3)
-        e3 = Entry(root, text="Input")
-        e3.grid(row = 2, column = 3)
-        e4 = Entry(root, text="Input")
-        e4.grid(row = 3, column = 3)
-        e5 = Entry(root, text="Input")
-        e5.grid(row = 4, column = 3)
+        for num in range(5):
+            # Generates entry text boxes
+            entry_list.insert(num, Entry(root))
+            entry_list[num].grid(row = num, column = 3)
+
+            # Generates labels.
+            labels.insert(num, Label(text = items_str[num] + ": "))
+            labels[num].grid(row=num, column = 0)
 
         # Generate button for location.
+        self.ips = Button(None)
         self.location = Button(None)
+        self.filter = Button(None)
+        self.owner = Button(None)
+        self.auto = Button(None)
+        self.quit = Button(self, text="QUIT", fg="red", command=root.destroy)
+
+        self.ips["text"] = "Get IPs"
         self.location["text"] = "Get Location"
+        self.filter["text"] = "Filter Data"
+        self.owner["text"] = "Find Owner"
+        self.auto["text"] = "Auto Generate"
+
+        self.ips["command"] = self.get_ips
+        self.ips.grid(row = 0, column = 1)
         self.location["command"] = self.find_location
         self.location.grid(row = 1, column = 1)
-        labelLoc = Label(text = "Label: ")
-        labelLoc.grid(row=1, column = 0)
-
-        self.filter = Button(None)
-        self.filter["text"] = "Filter Data"
         self.filter["command"] = self.filter_data
-        #self.filter.pack(side="top")
         self.filter.grid(row = 2, column = 1)
-        labelFilt = Label(text="Filter: ")
-        labelFilt.grid(row=2,column=0)
-
-        self.owner = Button(None)
-        self.owner["text"] = "Find Owner"
         self.owner["command"] = self.find_owner
-        #self.owner.pack(side="top")
         self.owner.grid(row = 3, column = 1)
-        labelOwner = Label(text = "Owner: ")
-        labelOwner.grid(row=3,column=0)
-
-        self.auto = Button(None)
-        self.auto["text"] = "Auto Generate"
         self.auto["command"] = self.auto
-        #self.auto.pack(side="top")
         self.auto.grid(row = 4,  column = 1)
-        labelAuto = Label(text = "Auto: ")
-        labelAuto.grid(row=4,column=0)
         
-        self.quit = Button(self, text="QUIT", fg="red",
-                              command=root.destroy)
-        #self.quit.pack(side="bottom")
 
     def get_ips(self):
+        """Grabs the IP and prints."""
         print("Getting IP's...")
 
         print("Done!")
     def find_location(self):
+        """Grabs the location and prints."""
         print("Finding Location...")
 
         print("Done!")
     def filter_data(self):
+        """Filters the data, printing."""
         print("Filtering...")
 
         print("Done!")
     def find_owner(self):
+        """Finds the owner and prints."""
         print("Finding owner...")
 
         print("Done!")
