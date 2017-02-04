@@ -60,5 +60,19 @@ phone companies.
 5. If no contact info could be found, take the ips and then do a geo location 
 search with some method.
 
+### Human Example
 
+First, we visited Shoden and used the GE-SRTP filter and US location. (1 and 2)
+
+We then took the ips from this search and looked at open ports. (3)
+
+We took these ports and ips and looked at censys to find any indentifyable 
+information for a person or company. Filtering for cell phone companies. (4)
+
+For the ones that a contact could not be found, we then searched for geo 
+location using tools like traceroute and online services like google maps. (5)
+
+### Next steps
+
+Attempt to automate the Human Example
 
