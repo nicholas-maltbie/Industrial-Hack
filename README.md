@@ -48,15 +48,15 @@ made to use another search engine, this would then export a list of ips.
 3. This takes a list of ips as an input. Then, this will search for identifyable 
 information. This will be done using Censys.
 
-  1. First, check for other ips at the same location. (this could be done with 
+  - First, check for other ips at the same location. (this could be done with 
   a hash map and maping by location).
   
-  2. Take the groups of ips with the same location. Check the person identifyed 
+  - Take the groups of ips with the same location. Check the person identifyed 
   at this location by one of the open services. The output is the list of names.
   
-  3. If no person name can be found use a company name if possible.
+  - If no person name can be found use a company name if possible.
   
-  4. This will output a list of names.
+  - This will output a list of names.
   
 4. Take this list of names and attempt to find contact info. This will also 
 filter out large companies who would not own an industrial device such as 
@@ -79,5 +79,24 @@ location using tools like traceroute and online services like google maps. (5)
 
 ### Next steps
 
-Attempt to automate the Human Example
+Initially before the user is able to use the program, they need to get the IP addresses
+on their own through manual data entry, or via Api's of a certain search engine.  
 
+- Once the user has their CSV file they start up the program and type in the name of their CSV file 
+in the Input CSV File text field (including extension).  
+
+- For test purposes our program already has the json file from the Censys with all the 
+information we need, but in the program it would query Censys and obtain that information 
+in a file, and then interpret it from there
+
+- The user can then select what output they would like in their output file by checking the Output boxes on the right, 
+these categories include Location, Name, Emails, Phones, Address', and Threats.  As of
+right now the location doesn't give the exact location of the SRTP machines, instead they
+give a general area of where they might be.  
+
+- Threats are classified as what other ports or services are vulnerable or exposed on the device.  There can be multiple Names, Emails, 
+Phones, and Addresses matched to each IP.  
+
+- The blacklist email domain text field indicates which email domain you would like to ignore.  
+
+- The output text area is for the user to specify what they would like to name their output file.
