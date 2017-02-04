@@ -77,24 +77,38 @@ information for a person or company. Filtering for cell phone companies. (4)
 For the ones that a contact could not be found, we then searched for geo 
 location using tools like traceroute and online services like google maps. (5)
 
+## Usage
+
+To use the project, you must have the required library and must have setup from 
+censys in the censyskeys file. Then, run the file 'controller.py' with python3.
+
+Image of the app running.
+![App Running](app.png)
+
+Image of filtered output.
+![Filtered output](filtered.png)
+
+Image of non-filtered output.
+![Non-filtered output](notFiltered.png)
+
 ### Next steps
 
 Initially before the user is able to use the program, they need to get the IP addresses
-on their own through manual data entry, or via Api's of a certain search engine.  
+on their own through manual data entry, or via Api's of a certain search engine.
 
 - The user needs to add their Censys key information into the censyskeys file
 
 - Once the user has their CSV file they start up the program and type in the name of their CSV file 
-in the Input CSV File text field (including extension).  
+in the Input CSV File text field (including extension). 
 
 - The user can then select what output they would like in their output file by checking the Output boxes on the right, 
-these categories include Location, Name, Emails, Phones, Address', and Threats.  
+these categories include Location, Name, Emails, Phones, Address', and Threats. 
 
 - The program then goes out to Censys and retrieves all the information about each 
 individual IP that the website can provide.
 
 - As of right now the location doesn't give the exact location of the SRTP machines, instead they
-give a general area of where they might be.  
+give a general area of where they might be. 
 
 - A future implementation would be taking the IP address and finding all IP addresses in the same general area using Censys
 and then determining IP's that are close and the company may be running an identifiable website on a local server.
