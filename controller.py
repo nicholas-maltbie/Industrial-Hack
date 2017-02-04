@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
-import webreader
+from webreader import *
 
 class ControlPanel(Frame):
     """A control panel is a Grapical User Interface for a user to interact with
@@ -19,15 +19,15 @@ class ControlPanel(Frame):
         self.textarea = ScrolledText(self).grid(row = 0, column = 2)
 
         # Creates empty list for entry boxes.
-        entry_list = []
+        self.entry_list = []
         labels = []
         items_str = ["IP", "Location", "Filter", "Owner", "Auto"]
         
         for num in range(len(items_str)):
             # Generates entry text boxes
-            entry_list.insert(num, Entry(root))
-            entry_list[num].grid(row = num, column = 3)
-
+            self.entry_list.insert(num, Entry(root))
+            self.entry_list[num].grid(row = num, column = 3)
+            
             # Generates labels.
             labels.insert(num, Label(text = items_str[num] + ": "))
             labels[num].grid(row=num, column = 0)
@@ -61,9 +61,18 @@ class ControlPanel(Frame):
 
     def get_ips(self):
         """Grabs the IP and prints."""
-        print("Getting IP's...")
+        try:
+            filename = self.entry_list[0].get() 
+            print("Getting IP's...")
+            for i in range(len(get_ips_from_file(filename))):
+                if (i % 4 == 0):
+                    print(get_ips_from_file(filename)[i])
+                else:
+                    pass
+            print("Done!")
+        except FileNotFoundError:
+            print('Please enter a valid CSV file.')
 
-        print("Done!")
     def find_location(self):
         """Grabs the location and prints."""
         print("Finding Location...")
