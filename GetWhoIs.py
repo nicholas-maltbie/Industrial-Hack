@@ -22,7 +22,12 @@ def get_who_is(ip_address):
     a = res.content.decode('utf-8').replace('\n', '').replace('&#34', '')
     a = a[a.index('{') : len(a) - a[::-1].index('}')]
     a = a.replace(';', '"')
-    return json.loads(a);
+    loaded = None
+    try:
+        loaded = json.loads(a);
+    except json.decoder.JSONDecodeError:
+        print("Error loading JSON file");
+    return loaded;
 
 def get_contacts(whois_data):
     """parse all dictionaries that are mapped by the word 'contact'"""
@@ -34,8 +39,11 @@ def get_contacts(whois_data):
             found.extend(get_contacts(whois_data[key]))
     return found
 
-def get_whois(ip_address):
+def get_all_data(ip_address):
     """Given an ip address, this will search for all whois information tied to 
     this address."""
-    return get_contacts(get_who_is(ip_address))
+    a = get_who_is(ip_address)
+    if a != None:
+        a = get_contacts(a)
+    return a
     
