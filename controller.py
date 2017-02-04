@@ -1,6 +1,8 @@
 from tkinter import *
 from tkinter.scrolledtext import ScrolledText
 from webreader import *
+from Export import *
+from IpFilter import *
 
 class ControlPanel(Frame):
     """A control panel is a Grapical User Interface for a user to interact with
@@ -14,14 +16,28 @@ class ControlPanel(Frame):
         # Generates title.
         title = "OSINTICS For 500 - 00101010"
         root.wm_title(title)
+
+        # Creates empty dictionary to store which values to display.
+        self.result = {
+                'ip': 1,
+                'location': 1,
+                'name': 1,
+                'email': 1,
+                'phone': 1,
+                'address': 1,
+                'threat':1,
+                 }
+
         csv_label = Label(text="Input CSV File")
         csv_label.grid(row=0,column=0)
         self.icsv = Entry(root)
         self.icsv.grid(row=1, column=0)
+
         blacklist_label = Label(text="Blacklist Info")
         blacklist_label.grid(row=2,column=0)
         self.blacklist = Entry(root)
         self.blacklist.grid(row=3, column=0)
+
         output_label = Label(text="Output CSV Filename")
         output_label.grid(row=4,column=0)
         self.output = Entry(root)
@@ -71,41 +87,41 @@ class ControlPanel(Frame):
 
     def find_location(self):
         """Adds locations."""
-        if self.var1.get():
-            print("Finding Location...")
+        self.result['location'] = self.var1.get()
 
     def find_name(self):
         """Adds names."""
-        if self.var2.get():
-            print('Name')
+        self.result['name'] = self.var2.get()
 
     def find_email(self):
         """Adds emails."""
-        if self.var3.get():
-            print("Finding owner...")
+        self.result['email'] = self.var3.get()
 
     def find_phone(self):
         """Adds phones."""
-        if self.var4.get():
-            print("Phones")
+        self.result['phone'] =  self.var4.get()
 
     def find_address(self):
         """Adds address."""
-        if self.var5.get():
-            print("Address")
+        self.result['address'] = self.var5.get()
 
     def find_threat(self):
         """Adds threats."""
-        if self.var6.get():
-            print("Threats")
+        self.result['threat'] = self.var6.get()
 
     def go_exec(self):
-        self.find_location(self)
-        self.find_name(self)
-        self.find_email(self)
-        self.find_phone(self)
-        self.find_address(self)
-        self.find_threat(self)
+        filename = self.icsv.get()
+        print(filename)
+        ips = get_ips_from_file(filename)
+        self.find_location()
+        self.find_name()
+        self.find_email()
+        self.find_phone()
+        self.find_address()
+        self.find_threat()
+        data = get_all_owner_info(ips)
+        data = filter_blacklist_email_domains(data)
+        output_data(ips,data, result, 'out2.csv')
 
 if __name__ == "__main__":
     root = Tk()

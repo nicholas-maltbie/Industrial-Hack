@@ -74,9 +74,13 @@ def output_data(ips, filtered_data, output, filename):
         
 if __name__ == "__main__":
     import webreader
+    # Gets list of IPs from csv file and saves in ips
     ips = webreader.get_ips_from_file("ips.csv")
     import IpFilter
+    # Takes addresses and uses that to get all the contact information of the owners of the IPs.
     data = IpFilter.get_all_owner_info(ips)
+    # Map from addresses to list of dictionaries containing contact information for different
+    # people.
     data = IpFilter.filter_blacklist_email_domains(data)
+    # Applies filter.  Filters based on 
     output_data(ips, data, {'ip':True, 'location':True, 'name':True, 'email':True, 'phone':True, 'address':True, 'threat':True}, 'out2.csv')
-
