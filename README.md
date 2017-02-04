@@ -31,6 +31,11 @@ identify the owner of the device.
 
 Use python to search using apis such as Shodan and Censys.
 
+### Required Libraries
+
+The libraries that this needs to run are *censys*, to insatll: 'sudo pip3 install
+censys'
+
 ### Step by step
 
 1. This will probably use Shoden and export a list of ips that another module 
