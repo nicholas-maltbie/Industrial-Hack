@@ -82,12 +82,13 @@ location using tools like traceroute and online services like google maps. (5)
 Initially before the user is able to use the program, they need to get the IP addresses
 on their own through manual data entry, or via Api's of a certain search engine.  
 
+- The user needs to add their Censys key information into the censyskeys file
+
 - Once the user has their CSV file they start up the program and type in the name of their CSV file 
 in the Input CSV File text field (including extension).  
 
-- For test purposes our program already has the json file from the Censys with all the 
-information we need, but in the program it would query Censys and obtain that information 
-in a file, and then interpret it from there
+- The program then goes out to Censys and retrieves all the information about each 
+individual IP that the website can provide.
 
 - The user can then select what output they would like in their output file by checking the Output boxes on the right, 
 these categories include Location, Name, Emails, Phones, Address', and Threats.  As of
