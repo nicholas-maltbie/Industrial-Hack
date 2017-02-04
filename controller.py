@@ -7,16 +7,15 @@ class ControlPanel(Frame):
     the rest of the project."""
     def __init__(self, master=None):
         super().__init__(master)
-        #self.pack()
         self.create_widgets()
         
-# ips, owner, filter, location, auto
     def create_widgets(self):
-        """Creates the buttons.""" 
+        """Creates the GUI interface aspects.""" 
         # Generates title.
-        root.wm_title("OSINTICS for 500")
+        title = "OSINTICS For 500 - 00101010"
+        root.wm_title(title)
 
-        # Draw button for IP
+        # Draw button for IP Scrolledtext
         self.textarea = ScrolledText(self).grid(row = 0, column = 2)
 
         # Creates empty list for entry boxes.
@@ -24,7 +23,7 @@ class ControlPanel(Frame):
         labels = []
         items_str = ["IP", "Location", "Filter", "Owner", "Auto"]
         
-        for num in range(5):
+        for num in range(len(items_str)):
             # Generates entry text boxes
             entry_list.insert(num, Entry(root))
             entry_list[num].grid(row = num, column = 3)
@@ -39,7 +38,8 @@ class ControlPanel(Frame):
         self.filter = Button(None)
         self.owner = Button(None)
         self.auto = Button(None)
-        self.quit = Button(self, text="QUIT", fg="red", command=root.destroy)
+        self.quit = Button(root, text="QUIT", fg='red', command=root.destroy)
+        self.quit.grid(row = 5, column = 3)
 
         self.ips["text"] = "Get IPs"
         self.location["text"] = "Get Location"
