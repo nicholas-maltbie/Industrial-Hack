@@ -11,33 +11,46 @@ class ControlPanel(Frame):
         
 # ips, owner, filter, location, auto
     def create_widgets(self):
-##        self.textarea = Button(None)
-##        self.textarea.grid(column=0, row=0, columnspan=4)
-##
-##        self.test = Button(None)
-##        self.test.grid(column=1, row=1, columnspan=4)
-        
+        """Creates the buttons."""
         self.ips = Button(None)
         self.ips["text"] = "Get IP's"
         self.ips["command"] = self.get_ips
-        #self.ips.pack(side="top")
-        #Label(master, text="Test").grid(row=0)
         
+        # Generates title.
+        root.wm_title("OSINTICS for 500")
+
+        # Generate text for IP
         labelIP = Label(text = "IP: ")
-        labelIP.config(text="IP: ")
         labelIP.grid(row = 0, column=0)
+        # Create padding.
         self.ips.grid(row = 0, column = 1)
+        # Draw button for IP
         self.textarea = ScrolledText(self)
         self.textarea.grid(row = 0, column = 2)
-        self.textarea.configure(state = "disabled")
 
+        # Generate text entry box.
+        e1 = Entry(root, text="Input")
+        e2 = Entry(root, text="Input")
+        e3 = Entry(root, text="Input")
+        e4 = Entry(root, text="Input")
+        e5 = Entry(root, text="Input")
+        
+        e1.grid(row = 0, column = 3)
+        e2 = Entry(root, text="Input")
+        e2.grid(row = 1, column = 3)
+        e3 = Entry(root, text="Input")
+        e3.grid(row = 2, column = 3)
+        e4 = Entry(root, text="Input")
+        e4.grid(row = 3, column = 3)
+        e5 = Entry(root, text="Input")
+        e5.grid(row = 4, column = 3)
+
+        # Generate button for location.
         self.location = Button(None)
         self.location["text"] = "Get Location"
         self.location["command"] = self.find_location
-        #self.location.pack(side="top")
         self.location.grid(row = 1, column = 1)
         labelLoc = Label(text = "Label: ")
-        labelLoc.config(text = "Label: ")
         labelLoc.grid(row=1, column = 0)
 
         self.filter = Button(None)
@@ -46,7 +59,6 @@ class ControlPanel(Frame):
         #self.filter.pack(side="top")
         self.filter.grid(row = 2, column = 1)
         labelFilt = Label(text="Filter: ")
-        labelFilt.config(text = "Filter: ")
         labelFilt.grid(row=2,column=0)
 
         self.owner = Button(None)
@@ -55,7 +67,6 @@ class ControlPanel(Frame):
         #self.owner.pack(side="top")
         self.owner.grid(row = 3, column = 1)
         labelOwner = Label(text = "Owner: ")
-        labelOwner.config(text = "Owner: ")
         labelOwner.grid(row=3,column=0)
 
         self.auto = Button(None)
@@ -64,7 +75,6 @@ class ControlPanel(Frame):
         #self.auto.pack(side="top")
         self.auto.grid(row = 4,  column = 1)
         labelAuto = Label(text = "Auto: ")
-        labelAuto.config(text = "Auto: ")
         labelAuto.grid(row=4,column=0)
         
         self.quit = Button(self, text="QUIT", fg="red",
