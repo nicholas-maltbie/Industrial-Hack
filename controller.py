@@ -14,86 +14,98 @@ class ControlPanel(Frame):
         # Generates title.
         title = "OSINTICS For 500 - 00101010"
         root.wm_title(title)
+        csv_label = Label(text="Input CSV File")
+        csv_label.grid(row=0,column=0)
+        self.icsv = Entry(root)
+        self.icsv.grid(row=1, column=0)
+        blacklist_label = Label(text="Blacklist Info")
+        blacklist_label.grid(row=2,column=0)
+        self.blacklist = Entry(root)
+        self.blacklist.grid(row=3, column=0)
+        output_label = Label(text="Output CSV Filename")
+        output_label.grid(row=4,column=0)
+        self.output = Entry(root)
+        self.output.grid(row=5, column=0)
 
-        # Draw button for IP Scrolledtext
-        self.textarea = ScrolledText(self).grid(row = 0, column = 2)
+        # Booleans for checkboxes.
+        self.var1 = IntVar()
+        self.var1.set(1)
+        self.var2 = IntVar()
+        self.var2.set(1)
+        self.var3 = IntVar()
+        self.var3.set(1)
+        self.var4 = IntVar()
+        self.var4.set(1)
+        self.var5 = IntVar()
+        self.var5.set(1)
+        self.var6 = IntVar()
+        self.var6.set(1)
 
-        # Creates empty list for entry boxes.
-        self.entry_list = []
-        labels = []
-        items_str = ["IP", "Location", "Filter", "Owner", "Auto"]
+        # Generate checkbox buttons for location.
+        self.location = Checkbutton(root, text='Locations', variable=self.var1)
+        self.name = Checkbutton(root, text='Names', variable=self.var2)
+        self.email = Checkbutton(root, text='Emails', variable=self.var3)
+        self.phone = Checkbutton(root, text='Phones', variable=self.var4)
+        self.address = Checkbutton(root, text='Address', variable=self.var5)
+        self.threat = Checkbutton(root, text='Threats', variable=self.var6)
         
-        for num in range(len(items_str)):
-            # Generates entry text boxes
-            self.entry_list.insert(num, Entry(root))
-            self.entry_list[num].grid(row = num, column = 3)
-            
-            # Generates labels.
-            labels.insert(num, Label(text = items_str[num] + ": "))
-            labels[num].grid(row=num, column = 0)
-
-        # Generate button for location.
-        self.ips = Button(None)
-        self.location = Button(None)
-        self.filter = Button(None)
-        self.owner = Button(None)
-        self.auto = Button(None)
-        self.quit = Button(root, text="QUIT", fg='red', command=root.destroy)
-        self.quit.grid(row = 5, column = 3)
-
-        self.ips["text"] = "Get IPs"
-        self.location["text"] = "Get Location"
-        self.filter["text"] = "Filter Data"
-        self.owner["text"] = "Find Owner"
-        self.auto["text"] = "Auto Generate"
-
-        self.ips["command"] = self.get_ips
-        self.ips.grid(row = 0, column = 1)
+        # Enable checkboxes with buttons.
         self.location["command"] = self.find_location
-        self.location.grid(row = 1, column = 1)
-        self.filter["command"] = self.filter_data
-        self.filter.grid(row = 2, column = 1)
-        self.owner["command"] = self.find_owner
-        self.owner.grid(row = 3, column = 1)
-        self.auto["command"] = self.auto
-        self.auto.grid(row = 4,  column = 1)
+        self.location.grid(row = 0, column = 1)
+        self.name["command"] = self.find_name
+        self.name.grid(row = 1, column = 1)
+        self.email["command"] = self.find_email
+        self.email.grid(row = 2, column = 1)
+        self.phone["command"] = self.find_phone
+        self.phone.grid(row = 3,  column = 1)
+        self.address["command"] = self.find_address
+        self.address.grid(row = 4, column = 1)
+        self.threat["command"] = self.find_threat
+        self.threat.grid(row = 5,  column = 1)
         
-
-    def get_ips(self):
-        """Grabs the IP and prints."""
-        try:
-            filename = self.entry_list[0].get() 
-            print("Getting IP's...")
-            for i in range(len(get_ips_from_file(filename))):
-                if (i % 4 == 0):
-                    print(get_ips_from_file(filename)[i])
-                else:
-                    pass
-            print("Done!")
-        except FileNotFoundError:
-            print('Please enter a valid CSV file.')
+        # Create go and quit buttons.
+        self.go = Button(root, text="GO", fg='green', command=self.go_exec)
+        self.go.grid(row = 2, column = 3)
+        self.quit = Button(root, text="QUIT", fg='red', command=root.destroy)
+        self.quit.grid(row = 4, column = 3)
 
     def find_location(self):
-        """Grabs the location and prints."""
-        print("Finding Location...")
+        """Adds locations."""
+        if self.var1.get():
+            print("Finding Location...")
 
-        print("Done!")
-    def filter_data(self):
-        """Filters the data, printing."""
-        print("Filtering...")
+    def find_name(self):
+        """Adds names."""
+        if self.var2.get():
+            print('Name')
 
-        print("Done!")
-    def find_owner(self):
-        """Finds the owner and prints."""
-        print("Finding owner...")
+    def find_email(self):
+        """Adds emails."""
+        if self.var3.get():
+            print("Finding owner...")
 
-        print("Done!")
-    def auto(self):
-        self.get_ips(self)
+    def find_phone(self):
+        """Adds phones."""
+        if self.var4.get():
+            print("Phones")
+
+    def find_address(self):
+        """Adds address."""
+        if self.var5.get():
+            print("Address")
+
+    def find_threat(self):
+        """Adds threats."""
+        if self.var6.get():
+            print("Threats")
+
+    def go_exec(self):
         self.find_location(self)
-        self.filter_data(self)
-        self.find_owner(self)
-        
+        self.find_name(self)
+        self.find_email(self)
+        self.find_phone(self)
+        self.find_address(self)
+        self.find_threat(self)
 
 if __name__ == "__main__":
     root = Tk()
