@@ -1,0 +1,63 @@
+ip	 location	 name	 email	 phone	 address	 threat
+166.255.63.114	 None	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.255.63.114	 None	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.255.63.114	 None	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.56	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.56	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.56	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.149.195.51	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.149.195.51	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.149.195.51	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+96.57.176.74	 (-74.1513, 40.8963)	 SUNL GROUP NY INC	 []	 []	 ['150 ETHEL RD\nPISCATAWAY\nNJ\n08854\nUNITED STATES']	 High
+96.57.176.74	 (-74.1513, 40.8963)	 Static IP Services	 ['hostmaster@cv.net']	 ['+1-516-803-3000']	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+96.57.176.74	 (-74.1513, 40.8963)	 Static IP Services	 []	 []	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+162.254.20.24	 None	 Administrator	 ['jwbrewster@ptci.com', 'jsmccully@ptci.com']	 ['+1-405-375-0390', '+1-405-375-0381', '+1-405-368-6901']	 ['108 E. Roberts Blvd\nKingfisher\nOK\n73750\nUNITED STATES']	 High
+162.254.20.24	 None	 Technician	 ['jwbrewster@ptci.com', 'jsmccully@ptci.com']	 ['+1-405-375-0390']	 ['108 E. Roberts Blvd\nKingfisher\nOK\n73750\nUNITED STATES']	 High
+162.254.20.24	 None	 Steven J Copeland	 ['sjcopeland@ptci.com']	 ['+1-405-375-0880']	 ['108 E. Robberts\nKingfisher\nOK\n73750\nUNITED STATES']	 High
+162.254.20.24	 None	 Pioneer Cellular	 []	 []	 ['108 E. Roberts Blvd\nKingfisher\nOK\n73750\nUNITED STATES']	 High
+108.58.169.50	 None	 Static IP Services	 ['hostmaster@cv.net']	 ['+1-516-803-3000']	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+108.58.169.50	 None	 Static IP Services	 []	 []	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+166.166.67.245	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.166.67.245	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.166.67.245	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.148.66.128	 None	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.148.66.128	 None	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.148.66.128	 None	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+50.252.247.34	 None	 Comcast Cable Communications Inc	 ['CNIPEO-Ip-registration@cable.comcast.com']	 ['+1-856-317-7200']	 ['1800 Bishops Gate Blvd\nMount Laurel\nNJ\n08054\nUNITED STATES']	 High
+50.252.247.34	 None	 Network Abuse and Policy Observance	 ['abuse@comcast.net']	 ['+1-888-565-4329']	 ['1800 Bishops Gate Blvd\nMount Laurel\nNJ\n08054\nUNITED STATES']	 High
+50.252.247.34	 None	 Comcast Cable Communications, LLC	 []	 []	 ['1800 Bishops Gate Blvd\nMt Laurel\nNJ\n08054\nUNITED STATES']	 High
+166.154.156.111	 None	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.154.156.111	 None	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.154.156.111	 None	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+107.84.4.7	 None	 None	 []	 []	 []	 Uknown
+166.164.239.181	 None	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.164.239.181	 None	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.164.239.181	 None	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.143.143.154	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.143.143.154	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.143.143.154	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.151.7.191	 (-97.822, 37.751)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.151.7.191	 (-97.822, 37.751)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.151.7.191	 (-97.822, 37.751)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+173.220.152.146	 None	 ROCKLAND SEWER SLOTSBU	 []	 []	 ['160 ROUTE 17\nSLOATSBURG\nNY\n10974\nUNITED STATES']	 High
+173.220.152.146	 None	 Static IP Services	 ['hostmaster@cv.net']	 ['+1-516-803-3000']	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+173.220.152.146	 None	 Static IP Services	 []	 []	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+206.19.236.60	 None	 None	 []	 []	 []	 Uknown
+166.142.141.175	 None	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.142.141.175	 None	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.142.141.175	 None	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.251.70.183	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+47.21.84.76	 None	 TOWN OF SMITHTOWN	 []	 []	 ['124 MAIN ST W\nSMITHTOWN\nNY\n11787\nUNITED STATES']	 High
+47.21.84.76	 None	 Static IP Services	 ['hostmaster@cv.net']	 ['+1-516-803-3000']	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+47.21.84.76	 None	 Static IP Services	 []	 []	 ['111 New South Rd\nHicksville\nNY\n11801\nUNITED STATES']	 High
+166.159.63.47	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.159.63.47	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.159.63.47	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.239.205.68	 (-97.0, 38.0)	 Service Provider Corporation	 []	 []	 ['PO Box 1381\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.239.205.68	 (-97.0, 38.0)	 WDSPCo Helpdesk	 ['ipabuse@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High
+166.239.205.68	 (-97.0, 38.0)	 Robert Sawyer	 ['sawyergroup@wirelessdataspco.org']	 ['+1-215-489-7599', '+1-215-857-2526']	 ['PO Box 1981\nDoylestown\nPA\n18901-0137\nUNITED STATES']	 High

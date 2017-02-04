@@ -9,7 +9,7 @@ def get_all_owner_info(addresses):
     accross the different addresses."""
     return {address:GetWhoIs.get_all_data(address) for address in addresses}
     
-def filter_blacklist_email_domains(owner_info, blacklist):
+def filter_blacklist_email_domains(owner_info, blacklist=default_blacklist):
     """Given a dict of address : list of get_all_data, this will remove all 
     addresses where the domain of the 'email' field is in the blacklist"""
     for addr in owner_info:

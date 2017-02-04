@@ -22,7 +22,7 @@ def get_who_is(ip_address):
     a = res.content.decode('utf-8').replace('\n', '').replace('&#34', '')
     a = a[a.index('{') : len(a) - a[::-1].index('}')]
     a = a.replace(';', '"')
-    loaded = None
+    loaded = {}
     try:
         loaded = json.loads(a);
     except json.decoder.JSONDecodeError:
