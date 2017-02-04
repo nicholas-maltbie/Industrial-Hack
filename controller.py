@@ -1,4 +1,3 @@
-
 from tkinter import *
 
 class ControlPanel(Frame):
@@ -11,8 +10,6 @@ class ControlPanel(Frame):
         
 # ips, owner, filter, location, auto
     def create_widgets(self):
-        master = Tk()
-
 ##        self.textarea = Button(None)
 ##        self.textarea.grid(column=0, row=0, columnspan=4)
 ##
