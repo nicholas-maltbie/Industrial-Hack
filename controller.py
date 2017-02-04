@@ -120,8 +120,9 @@ class ControlPanel(Frame):
         self.find_address()
         self.find_threat()
         data = get_all_owner_info(ips)
-        data = filter_blacklist_email_domains(data)
-        output_data(ips,data, result, 'out2.csv')
+        data = filter_blacklist_email_domains(data, [namel.strip() for name in
+            self.blacklist.get().split(',')])
+        output_data(ips, data, result, self.output.get())
 
 if __name__ == "__main__":
     root = Tk()
