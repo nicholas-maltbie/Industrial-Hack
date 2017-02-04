@@ -11,7 +11,7 @@ def get_ips(ports):
 
 def get_ips_from_file(filename):
     """This will get Ips from a filename"""
-    ipreader = csv.reader(open('ips.csv', newline=''), delimiter=',', quotechar='"')
+    ipreader = csv.reader(open(filename, newline=''), delimiter=',', quotechar='"')
     ips = []
     for entry in ipreader:
         ips += entry
