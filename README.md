@@ -87,13 +87,17 @@ on their own through manual data entry, or via Api's of a certain search engine.
 - Once the user has their CSV file they start up the program and type in the name of their CSV file 
 in the Input CSV File text field (including extension).  
 
+- The user can then select what output they would like in their output file by checking the Output boxes on the right, 
+these categories include Location, Name, Emails, Phones, Address', and Threats.  
+
 - The program then goes out to Censys and retrieves all the information about each 
 individual IP that the website can provide.
 
-- The user can then select what output they would like in their output file by checking the Output boxes on the right, 
-these categories include Location, Name, Emails, Phones, Address', and Threats.  As of
-right now the location doesn't give the exact location of the SRTP machines, instead they
+- As of right now the location doesn't give the exact location of the SRTP machines, instead they
 give a general area of where they might be.  
+
+- A future implementation would be taking the IP address and finding all IP addresses in the same general area using Censys
+and then determining IP's that are close and the company may be running an identifiable website on a local server.
 
 - Threats are classified as what other ports or services are vulnerable or exposed on the device.  There can be multiple Names, Emails, 
 Phones, and Addresses matched to each IP.  
